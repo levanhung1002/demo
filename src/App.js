@@ -28,7 +28,8 @@ function App() {
         <Router>
             <div>
 
-                <Nav/>
+                <Nav logout = { logout }
+                     isUserLoggedIn = { isUserLoggedIn } />
 
 
                 {/* A <Switch> looks through its children <Route>s and

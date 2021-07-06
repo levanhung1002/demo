@@ -4,27 +4,6 @@ import Action from "./Action";
 
 export default function Posts() {
 
-    const header = {
-        columns: [
-            {
-                label: 'ID',
-                field: 'id',
-                sort: 'asc',
-                width: 150
-            },
-            {
-                label: 'Title',
-                field: 'title',
-                width: 150
-            },
-            {
-                label: 'Action',
-                field: 'action',
-                width: 150
-            }
-        ]
-    };
-
     const SORT = ['NONE', 'ASC', 'DES'];
 
     const [posts, setPosts] = useState([]);
@@ -33,7 +12,7 @@ export default function Posts() {
 
     const [sort, setSort] = useState(0);
 
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     function handleRemove(id) {
         const removedPosts = posts.filter(e => e.id !== id);
